@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="app-analyze-common-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app-analyze-common/target/app-analyze-common-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

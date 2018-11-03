@@ -1,0 +1,38 @@
+body{
+    font-family: "microsoft yahei", "微软雅黑","courier New";
+    font-size: 17px;
+}
+
+div {
+    width: 200px;
+    height: 10px;
+    border: 1px solid blue;
+}
+
+a {
+    width: 100px;
+    height: 30px;
+    border: 1px solid blue;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+form * {
+    font-size: 17px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid darkolivegreen;
+}
+
+#btnSubmit{
+    height: 30px;
+    width: 150px;
+}
+
+td{
+    border: 1px solid cadetblue;
+    padding: 5px 50px;
+}

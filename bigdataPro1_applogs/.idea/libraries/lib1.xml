@@ -1,0 +1,46 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/hamcrest-core-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/libthrift-0.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/junit-4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/avro-ipc-1.7.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/app-analyze-common-1.0-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/jetty-util-6.1.26.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/slf4j-log4j12-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/xz-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/servlet-api-2.5-20110124.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/jackson-core-asl-1.8.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/mina-core-2.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/commons-cli-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/jetty-6.1.26.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/netty-3.9.4.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/paranamer-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/joda-time-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/flume-ng-core-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/flume-ng-configuration-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/slf4j-api-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/jsr305-1.3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/commons-codec-1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/jackson-mapper-asl-1.8.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/velocity-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/flume-ng-auth-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/avro-1.7.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/commons-io-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/guava-11.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/flume-ng-sdk-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/httpcore-4.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/commons-compress-1.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/gson-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/fastjson-1.2.24.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/commons-lang-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/httpclient-4.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app-logs-flume/lib/snappy-java-1.0.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

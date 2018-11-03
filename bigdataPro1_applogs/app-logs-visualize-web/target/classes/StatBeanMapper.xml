@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="stats">
+    <!-- 查询新增用户 -->
+    <select id="newusers" resultMap="rm_StatBean">
+        select count(*) stcount
+        from (
+          select min(createdatms) mintime
+          from ext_startup_logs
+          where appid = 'sdk34734'
+        ) t
+    </select>
+
+    <!-- 哪款app当前周每天新增用户数 -->
+    <select id="selectThisWeekNewusers" resultMap="rm_StatBean">
+        select formattime(t.mintime,'yyyy/MM/dd') stdate, count(*) stcount
+        from
+        (
+        select deviceid , min(createdatms) mintime
+        from ext_startup_logs
+        where appid = #{appid} group by deviceid having mintime &gt;= getweekbegin(-1) and mintime &lt; getweekbegin(1)
+        ) t
+        group  by formattime(t.mintime,'yyyy/MM/dd')
+    </select>
+    <!-- 哪款app 最近3周每周的活跃用户数 -->
+    <select id="selectWeeksActivers" resultMap="rm_StatBean">
+        select  formattime(createdatms,'yyyy/MM/dd',0) stdate, count(distinct deviceid) stcount
+        from ext_startup_logs
+        where concat(ym,day) &gt;= formattime(getweekbegin(-2),'yyyyMMdd') and appid = #{appid}
+        group by formattime(createdatms,'yyyy/MM/dd',0)
+    </select>
+    <!--当天沉默用户数-->
+    <select id="selectDaySilenters" resultMap="rm_StatBean">
+        select count(*)
+        from
+        (
+           select deviceid , count(createdatms) dcount,min(createdatms) dmin
+           from ext_startup_logs where appid = #{appid}
+           group by  deviceid having dcount = 1 and dmin &lt; getdaybegin(-1)
+        ) t
+    </select>
+    <resultMap id="rm_StatBean" type="_StatBean">
+        <result column="stdate" property="date"/>
+        <result column="stcount" property="count" />
+    </resultMap>
+</mapper>

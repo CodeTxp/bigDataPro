@@ -1,0 +1,73 @@
+{
+  "appId": "110112345",
+  "deviceId": "23409abcefaabbdf3245aba32",
+  "appVersion": "3.2.1",
+  "appChannel": "appstore",
+  "appPlatform": "android",
+  "appStartupLogs": [
+    {
+      "network": "3g",
+      "carrier": "中国联通",
+      "deviceStyle": "红米notes",
+      "screenSize": "400x800",
+      "osType": "android 4.0",
+      "createdAtMs": 1434524683
+    },
+    {
+      "network": "3g",
+      "carrier": "中国联通",
+      "deviceStyle": "红米notes",
+      "screenSize": "400x800",
+      "osType": "android 4.1",
+      "createdAtMs": 1434534683
+    }
+  ],
+  "appPageLogs": [
+    {
+      "pageId": "index.html",
+      "visitIndex": 0,
+      "nextPage": "main.html",
+      "stayDurationSecs": 60,
+      "createdAtMs": 1434534683
+    },
+    {
+      "pageId": "main.html",
+      "visitIndex": 1,
+      "nextPage": "list.html",
+      "stayDurationSecs": 30,
+      "createdAtMs": 1434535683
+    },
+    {
+      "pageId": "list.html",
+      "visitIndex": 2,
+      "nextPage": "",
+      "stayDurationSecs": 90,
+      "createdAtMs": 1434536683
+    }
+  ],
+  "appEventLogs": [
+    {
+      "eventId": "123",
+      "eventDurationSecs": 12,
+      "createdAtMs": 1434536383
+    },
+    {
+      "eventId": "testEvent",
+      "eventDurationSecs": 2,
+      "createdAtMs": 1434535383
+    }
+  ],
+  "appUsageLogs": [
+    {
+      "singleUseDurationSecs": 135,
+      "createdAtMs": 1434535283
+    }
+  ],
+  "appErrorLogs": [
+    {
+      "errorBrief": "at cn.appstore.appIn.web.AbstractBaseController.validInbound(AbstractBaseController.java:72)",
+      "errorDetail": "java.lang.NullPointerException\n    at cn.appstore.appIn.web.AbstractBaseController.validInbound(AbstractBaseController.java:72)\n    at cn.appcan.appIn.web.InboundController.handleInbound(InboundController.java:53)\n    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)\n    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n    at java.lang.reflect.Method.invoke(Method.java:606)\n    at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:212)\n    at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:126)\n    at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:96)\n    at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:617)\n    at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:578)\n    at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)\n    at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:900)\n    at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:827)\n    at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:882)\n    at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:789)\n",
+      "createdAtMs": 1434524683
+    }
+  ]
+}
