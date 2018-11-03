@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--其中10指每隔10秒刷新一次页面-->
+    <meta http-equiv="refresh" content="60">
+    <title>Title</title>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+</head>
+<body>
+   <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+
+   <div id="main" style="width: 600px;height:400px;position:absolute;top:50%;left: 50%;margin-top: -200px;margin-left: -300px;"></div>
+   <script type="text/javascript">
+       // 基于准备好的dom，初始化echarts实例
+       var myChart = echarts.init(document.getElementById('main'));
+
+       // 指定图表的配置项和数据
+       var option = {
+           title : {
+               text: '视频流量点击来源分析',
+               subtext: '模拟采集',
+               x:'center',
+               y:'top'
+           },
+           tooltip: {
+               trigger: 'item',
+               formatter: "{a} <br/>{b}: {c} ({d}%)"
+           },
+           legend: {
+               x : 'center',
+               y : 'bottom',
+               data:[ '爱奇艺直达','搜索引擎','百度','雅虎','搜狗','必应']
+           },
+           series: [
+               {
+                   name:'访问来源',
+                   type:'pie',
+                   selectedMode: 'single',
+                   radius: [0, '30%'],
+
+                   label: {
+                       normal: {
+                           position: 'inner'
+                       }
+                   },
+                   labelLine: {
+                       normal: {
+                           show: false
+                       }
+                   },
+                   data:(function () {//<![CDATA[
+                       var datas=[]
+                       $.ajax({
+                           type:"POST",
+                           url:"/sparkweb/clickCategory",
+                           dataType:'json',
+                           async:false,
+                           success:function (result) {
+                               for (var i = 0; i < result.length; i++) {//value:335, name:'直接访问'}
+                                   datas.push({"value": result[i].value, "name":result[i].name})
+                               }
+                           }
+                       })
+                       return datas;
+                       //]]>
+                   })().sort(function (a, b) { return a.value - b.value; })
+               },
+               {
+                   name:'访问来源',
+                   type:'pie',
+                   radius: ['40%', '55%'],
+                   label: {
+                       normal: {
+                           formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                           backgroundColor: '#eee',
+                           borderColor: '#aaa',
+                           borderWidth: 1,
+                           borderRadius: 4,
+                           // shadowBlur:3,
+                           // shadowOffsetX: 2,
+                           // shadowOffsetY: 2,
+                           // shadowColor: '#999',
+                           // padding: [0, 7],
+                           rich: {
+                               a: {
+                                   color: '#999',
+                                   lineHeight: 22,
+                                   align: 'center'
+                               },
+                               // abg: {
+                               //     backgroundColor: '#333',
+                               //     width: '100%',
+                               //     align: 'right',
+                               //     height: 22,
+                               //     borderRadius: [4, 4, 0, 0]
+                               // },
+                               hr: {
+                                   borderColor: '#aaa',
+                                   width: '100%',
+                                   borderWidth: 0.5,
+                                   height: 0
+                               },
+                               b: {
+                                   fontSize: 16,
+                                   lineHeight: 33
+                               },
+                               per: {
+                                   color: '#eee',
+                                   backgroundColor: '#334455',
+                                   padding: [2, 4],
+                                   borderRadius: 2
+                               }
+                           }
+                       }
+                   },
+                   data:(function () {//<![CDATA[
+                       var datas=[]
+                       $.ajax({
+                           type:"POST",
+                           url:"/sparkweb/categoryOfSearch",
+                           dataType:'json',
+                           async:false,
+                           success:function (result) {
+                               for (var i = 0; i < result.length; i++) {//value:335, name:'直接访问'}
+                                   datas.push({"value": result[i].value, "name":result[i].name})
+                               }
+                           }
+                       })
+                       return datas;
+                       //]]>
+                   })().sort(function (a, b) { return a.value - b.value; })
+               }
+           ]
+       };
+
+
+       // 使用刚指定的配置项和数据显示图表。
+       myChart.setOption(option);
+   </script>
+</body>
+</html>
